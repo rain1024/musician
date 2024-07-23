@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/musician/website/build/vi/blog","blogTitle":"Blog"}')}}]);

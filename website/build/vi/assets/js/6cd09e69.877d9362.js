@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([[2055],{2187:s=>{s.exports=JSON.parse('{"label":"business-analysis","permalink":"/musician/website/build/vi/blog/tags/business-analysis","allTagsPath":"/musician/website/build/vi/blog/tags","count":1,"unlisted":false}')}}]);
