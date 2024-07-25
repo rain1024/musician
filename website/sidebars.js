@@ -22,7 +22,7 @@ const sidebars = {
       type: 'category',
       label: 'Beginner',
       items: [
-        'beginner/lesson-1',
+        'beginner/roadmap',
         'beginner/apps',
       ],
     },
