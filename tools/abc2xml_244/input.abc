@@ -1,0 +1,12 @@
+X:3
+T:Major Scale
+M:4/4
+K:C
+L:1/4
+%%staves {RH LH}
+V:RH clef=treble
+V:LH clef=bass
+V:RH
+C D E F | G A B c | c B A G | F E D C | z4 | z4 | z4 | z4 | C D E F | G A B c | c B A G | F E D C |
+V:LH
+z4  | z4 | z4 | z4 | C, D, E, F, | G, A, B, C | C B, A, G, | F, E, D, C, | C, D, E, F, | G, A, B, C | C B, A, G, | F, E, D, C, 
