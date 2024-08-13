@@ -24,6 +24,8 @@ const sidebars = {
       items: [
         'beginner/roadmap',
         'beginner/apps',
+        'beginner/books',
+        'beginner/pieces',
         'beginner/skills',
       ],
     },
