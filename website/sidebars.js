@@ -29,7 +29,8 @@ const sidebars = {
         'beginner/skills',
       ],
     },
-    'composition'
+    'composition',
+    'awesome'
   ],
 };
 
