@@ -23,6 +23,7 @@ const sidebars = {
       label: 'Beginner',
       items: [
         'beginner/roadmap',
+        'beginner/lessons',
         'beginner/apps',
         'beginner/books',
         'beginner/pieces',

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([[7472],{55513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Bank","permalink":"/musician/website/build/vi/blog/bank-vn","unlisted":false},{"title":"VEA","permalink":"/musician/website/build/vi/blog/vea","unlisted":false}]}')}}]);
