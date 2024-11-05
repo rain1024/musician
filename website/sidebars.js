@@ -24,6 +24,7 @@ const sidebars = {
     'tools',
     'books',
     'pieces',
+    'techniques',
     'skills',
     'composition',
     'awesome',
