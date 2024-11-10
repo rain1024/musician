@@ -7,6 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import Wheel from '@site/src/components/Wheel';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -38,6 +39,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        {/* <Wheel/> */}
       </main>
     </Layout>
   );
