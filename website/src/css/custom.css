@@ -1,4 +1,84 @@
 @tailwind base;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+}
+
+h1 {
+  font-size: 2.25rem; /* Tailwind text-3xl */
+  font-weight: 700;  /* Tailwind font-bold */
+}
+
+h2 {
+  font-size: 1.875rem; /* Tailwind text-2xl */
+  font-weight: 600;  /* Tailwind font-semibold */
+}
+
+h3 {
+  font-size: 1.5rem; /* Tailwind text-xl */
+  font-weight: 500;  /* Tailwind font-medium */
+}
+
+h4 {
+  font-size: 1.25rem; /* Tailwind text-lg */
+  font-weight: 500;  /* Tailwind font-medium */
+}
+
+h5 {
+  font-size: 1.125rem; /* Tailwind text-base */
+  font-weight: 500;  /* Tailwind font-medium */
+}
+
+h6 {
+  font-size: 1rem; /* Tailwind text-sm */
+  font-weight: 500; /* Tailwind font-medium */
+}
+
+ul {
+  margin: 1rem 0; /* Adds space before and after the list */
+  padding-left: 1.5rem; /* Adds indentation for the list */
+  list-style-type: disc; /* Default bullet style */
+}
+
+/* List Items */
+li {
+  margin: 0.5rem 0; /* Adds spacing between list items */
+  color: var(--ifm-body-color); /* Inherits text color from body */
+  font-size: 1rem; /* Tailwind text-base */
+  line-height: 1.5rem; /* Tailwind leading-relaxed */
+}
+
+/* Nested Lists */
+ul ul, ol ul {
+  list-style-type: circle; /* Changes bullet style for nested lists */
+}
+
+ul ul ul, ol ul ul {
+  list-style-type: square; /* Changes bullet style for deeper nested lists */
+}
+
 @tailwind components;
 @tailwind utilities;
 /**

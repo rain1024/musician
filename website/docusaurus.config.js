@@ -102,15 +102,6 @@ const config = {
 
   markdown: {
     mermaid: true,
-    format: 'mdx',
-    mdx1Compat: {
-      comments: true,
-      admonitions: true,
-      headingIds: true,
-    },
-    anchors: {
-      maintainCase: true,
-    },
   },
 
   themes: ['@docusaurus/theme-mermaid'],
