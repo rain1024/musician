@@ -86,10 +86,38 @@ const config = {
     },
   ],
 
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+
   markdown: {
     mermaid: true,
+    format: 'mdx',
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+    anchors: {
+      maintainCase: true,
+    },
   },
+
   themes: ['@docusaurus/theme-mermaid'],
+
+  future: {
+    experimental_faster: true,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

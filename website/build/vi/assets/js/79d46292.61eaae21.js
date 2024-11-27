@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([[4994],{61135:s=>{s.exports=JSON.parse('{"label":"sector-analysis","permalink":"/musician/website/build/vi/blog/tags/sector-analysis","allTagsPath":"/musician/website/build/vi/blog/tags","count":1,"unlisted":false}')}}]);

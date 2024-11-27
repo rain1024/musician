@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([["7627"],{47548:function(s){s.exports=JSON.parse('{"blogBasePath":"/musician/website/build/blog","blogTitle":"Blog","authorsListPath":"/musician/website/build/blog/authors"}')}}]);
