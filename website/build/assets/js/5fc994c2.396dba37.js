@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([[1874],{79031:(e,s,c)=>{c.r(s),c.d(s,{default:()=>a});c(96540);var i=c(28244),n=c(74848);function a(){return(0,n.jsx)(i.A,{title:"Showcase",description:"Showcase",children:(0,n.jsx)("h1",{children:"Showcase"})})}}}]);

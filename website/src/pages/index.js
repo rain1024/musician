@@ -4,10 +4,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Translate from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+// import Wheel from '@site/src/components/Wheel'
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import Wheel from '@site/src/components/Wheel';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();

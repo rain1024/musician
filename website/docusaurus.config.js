@@ -109,7 +109,11 @@ const config = {
             position: 'left',
             label: 'Tutorials',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/showcase',
+            label: 'Showcase',
+            position: 'left'
+          },
           {
             href: 'https://github.com/rain1024/musician',
             label: 'GitHub',
