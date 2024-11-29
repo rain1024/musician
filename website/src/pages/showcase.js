@@ -133,8 +133,9 @@ export default function MusicList() {
                         className="border border-gray-300 rounded-lg p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                     >
                         <option value="">All Genres</option>
-                        <option value="Soundtrack">Soundtrack</option>
                         <option value="Classical">Classical</option>
+                        <option value="New Age">New Age</option>
+                        <option value="Soundtrack">Soundtrack</option>
                     </select>
                     <button
                         onClick={playRandomSong}

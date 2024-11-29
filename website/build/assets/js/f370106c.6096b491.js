@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmusician=self.webpackChunkmusician||[]).push([["9356"],{51451:function(t){t.exports=JSON.parse('{"authors":[{"name":"Vu Anh","title":"Newbie Investor","url":"https://github.com/rain1024","imageURL":"https://avatars.githubusercontent.com/u/1780281","key":"anhv","page":null,"count":0}]}')}}]);

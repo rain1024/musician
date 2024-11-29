@@ -11,6 +11,10 @@ const songs = [
     { id: 15, title: 'Eine Kleine Nachtmusik', artist: 'Wolfgang Amadeus Mozart', genre: 'Classical', cover: 'song.jpg', audio: 'eine-kleine-nachtmusik.mp3' },
     { id: 16, title: 'Symphony No. 40', artist: 'Wolfgang Amadeus Mozart', genre: 'Classical', cover: 'song.jpg', audio: 'symphony-no-40.mp3' },
     { id: 17, title: 'Minuet in G Major', artist: 'Johann Sebastian Bach', genre: 'Classical', cover: 'song.jpg', audio: 'minuet-in-g-major.mp3' },
+    { id: 18, title: 'River Flows in You', artist: 'Yiruma', genre: 'New Age', cover: 'river-flows-in-you.jpg', audio: 'river-flows-in-you.mp3' },
+    { id: 19, title: 'Kiss the Rain', artist: 'Yiruma', genre: 'New Age', cover: 'kiss-the-rain.jpg', audio: 'kiss-the-rain.mp3' },
+    { id: 20, title: 'Spring Time', artist: 'Yiruma', genre: 'New Age', cover: 'spring-time.jpg', audio: 'spring-time.mp3' },
+    { id: 21, title: 'Maybe', artist: 'Yiruma', genre: 'New Age', cover: 'maybe.jpg', audio: 'maybe.mp3' },
 ];
 
 export default songs;
