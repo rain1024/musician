@@ -3,6 +3,54 @@ import Layout from '@theme/Layout';
 import songs from '@site/src/components/MusicData';
 import { PlayIcon, PauseIcon, XMarkIcon } from '@heroicons/react/24/solid';
 
+// SongCard Component
+function SongCard({ song, onPlay, onPause, nowPlaying }) {
+    const isPlaying = nowPlaying?.id === song.id && nowPlaying.isPlaying;
+
+    const handleTogglePlay = () => {
+        if (isPlaying) {
+            onPause();
+        } else {
+            onPlay(song.audio, song);
+        }
+    };
+
+    return (
+        <div key={song.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative">
+                <img
+                    src={`../images/${song.cover}`}
+                    alt={song.title}
+                    className="w-full h-60 object-cover"
+                />
+                <button
+                    onClick={handleTogglePlay}
+                    className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold ${
+                        isPlaying ? 'opacity-100' : 'opacity-0'
+                    } hover:opacity-100 transition-opacity duration-300`}
+                >
+                    {isPlaying ? (
+                        <PauseIcon className="h-8 w-8" />
+                    ) : (
+                        <PlayIcon className="h-8 w-8" />
+                    )}
+                </button>
+            </div>
+            <div className="p-4">
+                <h2 className="text-lg font-bold text-gray-800">{song.title}</h2>
+                <p className="text-gray-600">by {song.artist}</p>
+                {song.composer && (
+                    <p className="text-gray-500">Composer: {song.composer}</p>
+                )}
+                <span className="inline-block text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1">
+                    {song.genre}
+                </span>
+            </div>
+        </div>
+    );
+}
+
+// Main MusicList Component
 export default function MusicList() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
@@ -10,7 +58,7 @@ export default function MusicList() {
     const [nowPlaying, setNowPlaying] = useState(null);
     const [showAudioBar, setShowAudioBar] = useState(false);
 
-    const filteredSongs = songs.filter(song => {
+    const filteredSongs = songs.filter((song) => {
         const query = searchQuery.toLowerCase();
         const matchesTitle = song.title.toLowerCase().includes(query);
         const matchesArtist = song.artist?.toLowerCase().includes(query);
@@ -30,6 +78,13 @@ export default function MusicList() {
         setNowPlaying({ ...song, isPlaying: true });
         setShowAudioBar(true);
         audio.play();
+    };
+
+    const pauseAudio = () => {
+        if (currentAudio) {
+            currentAudio.pause();
+        }
+        setNowPlaying((prev) => ({ ...prev, isPlaying: false }));
     };
 
     const playRandomSong = () => {
@@ -59,8 +114,7 @@ export default function MusicList() {
                 currentAudio.play();
                 setNowPlaying((prev) => ({ ...prev, isPlaying: true }));
             } else {
-                currentAudio.pause();
-                setNowPlaying((prev) => ({ ...prev, isPlaying: false }));
+                pauseAudio();
             }
         }
     };
@@ -147,26 +201,14 @@ export default function MusicList() {
 
                 {/* Song Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                    {filteredSongs.map(song => (
-                        <div key={song.id} className="bg-white rounded-lg shadow-md overflow-hidden relative">
-                            <img src={`../images/${song.cover}`} alt={song.title} className="w-full h-60 object-cover" />
-                            <div className="p-4">
-                                <h2 className="text-lg font-bold text-gray-800">{song.title}</h2>
-                                <p className="text-gray-600">by {song.artist}</p>
-                                {song.composer && (
-                                    <p className="text-gray-500">Composer: {song.composer}</p>
-                                )}
-                                <span className="inline-block text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1">
-                                    {song.genre}
-                                </span>
-                            </div>
-                            <button
-                                onClick={() => playAudio(song.audio, song)}
-                                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold opacity-0 hover:opacity-100 transition-opacity duration-300"
-                            >
-                                <PlayIcon className="h-8 w-8" />
-                            </button>
-                        </div>
+                    {filteredSongs.map((song) => (
+                        <SongCard
+                            key={song.id}
+                            song={song}
+                            onPlay={playAudio}
+                            onPause={pauseAudio}
+                            nowPlaying={nowPlaying}
+                        />
                     ))}
                 </div>
             </main>
