@@ -30,7 +30,7 @@ export default function MusicList() {
         if (currentAudio) {
             currentAudio.pause(); // Pause any currently playing audio
         }
-        const audio = new Audio(`./audios/${audioUrl}`);
+        const audio = new Audio(`../audios/${audioUrl}`);
         setCurrentAudio(audio);
         audio.play();
     };
@@ -66,7 +66,7 @@ export default function MusicList() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
                     {filteredSongs.map(song => (
                         <div key={song.id} className="bg-white rounded-lg shadow-md overflow-hidden relative">
-                            <img src={`./images/${song.cover}`} alt={song.title} className="w-full h-60 object-cover" />
+                            <img src={`../images/${song.cover}`} alt={song.title} className="w-full h-60 object-cover" />
                             <div className="p-4">
                                 <h2 className="text-lg font-bold text-gray-800">{song.title}</h2>
                                 <p className="text-gray-600">by {song.artist}</p>

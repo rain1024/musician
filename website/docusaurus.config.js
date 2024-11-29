@@ -129,7 +129,7 @@ const config = {
             label: 'Tutorials',
           },
           {
-            to: '/showcase',
+            to: '/showcase/',
             label: 'Showcase',
             position: 'left'
           },
