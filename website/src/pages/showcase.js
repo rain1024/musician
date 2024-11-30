@@ -261,6 +261,7 @@ export default function MusicList() {
                         <option value="Classical">Classical</option>
                         <option value="New Age">New Age</option>
                         <option value="Soundtrack">Soundtrack</option>
+                        <option value="K-Pop">K-Pop</option>
                     </select>
                     <button
                         onClick={playRandomSong}
