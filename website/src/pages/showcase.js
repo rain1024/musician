@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import songs from '@site/src/components/MusicData';
 import { PlayIcon, PauseIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 // SongCard Component
+import { useState } from "react";
+
 function SongCard({ song, onPlay, onPause, nowPlaying }) {
+    const [isModalOpen, setModalOpen] = useState(false);
     const isPlaying = nowPlaying?.id === song.id && nowPlaying.isPlaying;
 
     const handleTogglePlay = () => {
@@ -15,38 +19,105 @@ function SongCard({ song, onPlay, onPause, nowPlaying }) {
         }
     };
 
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
+
     return (
-        <div key={song.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="relative">
+        <>
+            <div
+                key={song.id}
+                className="group relative bg-gradient-to-r from-white via-gray-100 to-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            >
+                <div className="relative rounded-t-xl overflow-hidden">
+                    <img
+                        src={`../images/${song.cover}`}
+                        alt={song.title}
+                        className="w-full h-60 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    >
+                        <button
+                            onClick={handleTogglePlay}
+                            className="flex items-center justify-center p-3 bg-gray-800 rounded-full hover:bg-red-500 hover:scale-110 hover:shadow-lg transition-all duration-300 ease-in-out"
+                            aria-label={isPlaying ? "Pause" : "Play"}
+                        >
+                            {isPlaying ? (
+                                <PauseIcon className="h-8 w-8 text-white" />
+                            ) : (
+                                <PlayIcon className="h-8 w-8 text-white" />
+                            )}
+                        </button>
+                    </div>
+                    <button
+                        onClick={openModal}
+                        className="absolute top-3 right-3 p-2 rounded-full shadow-md bg-gray-800 bg-opacity-10 hover:bg-red-500 hover:shadow-lg hover:scale-105 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 flex items-center space-x-2"
+                        aria-label="More Info"
+                    >
+                        <InformationCircleIcon
+                            className="h-4 w-4 text-white transition-transform duration-300 ease-in-out cursor-pointer"
+                        />
+                    </button>
+                </div>
+                <div className="p-6">
+                    <h2 className="text-xl font-semibold text-gray-900 truncate">
+                        {song.title}
+                    </h2>
+                    <p className="text-gray-700 mt-1 truncate">by {song.artist}</p>
+                    {song.composer && (
+                        <p className="text-sm text-gray-500 mt-1 truncate">
+                            Composer: {song.composer}
+                        </p>
+                    )}
+                    <div className="flex items-center mt-3">
+                        <span className="inline-block text-xs font-medium text-gray-700 bg-gray-200 rounded-full px-3 py-1">
+                            {song.genre}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {isModalOpen && (
+    <div
+        className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center bg-black bg-opacity-100 backdrop-blur-sm"
+        style={{ zIndex: 99999 }}
+    >
+        <div className="relative bg-white bg-opacity-80 w-screen h-screen flex flex-col items-center justify-center p-8">
+            <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-red-700 transition duration-200"
+                aria-label="Close"
+            >
+                ✕
+            </button>
+            <div className="flex flex-col items-center h-full overflow-auto">
                 <img
                     src={`../images/${song.cover}`}
                     alt={song.title}
-                    className="w-full h-60 object-cover"
+                    className="w-full max-w-xl h-80 object-cover rounded-xl shadow-lg mb-6"
                 />
-                <button
-                    onClick={handleTogglePlay}
-                    className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold ${
-                        isPlaying ? 'opacity-100' : 'opacity-0'
-                    } hover:opacity-100 transition-opacity duration-300`}
-                >
-                    {isPlaying ? (
-                        <PauseIcon className="h-8 w-8" />
-                    ) : (
-                        <PlayIcon className="h-8 w-8" />
-                    )}
-                </button>
-            </div>
-            <div className="p-4">
-                <h2 className="text-lg font-bold text-gray-800">{song.title}</h2>
-                <p className="text-gray-600">by {song.artist}</p>
+                <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-2">{song.title}</h2>
+                <p className="text-xl text-gray-700 text-center mb-4">by {song.artist}</p>
                 {song.composer && (
-                    <p className="text-gray-500">Composer: {song.composer}</p>
+                    <p className="text-lg text-gray-600 italic mb-4">Composer: {song.composer}</p>
                 )}
-                <span className="inline-block text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1">
-                    {song.genre}
-                </span>
+                <p className="text-lg text-gray-700 mb-4">Genre: {song.genre}</p>
+                <audio controls className="w-full max-w-xl">
+                    <source src={`../audios/${song.audio}`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <div className="mt-6">
+                    <button
+                        onClick={closeModal}
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition duration-200"
+                    >
+                        Close
+                    </button>
+                </div>
             </div>
         </div>
+    </div>
+)}
+        </>
     );
 }
 
@@ -128,7 +199,7 @@ export default function MusicList() {
     };
 
     return (
-        <Layout title="Music List" description="Search and filter through a list of songs">
+        <Layout title="Music Showcase" description="Search and filter through a list of songs">
             <main className="min-h-screen bg-gray-50 py-8 px-4">
                 {/* Fixed Audio Controller */}
                 {showAudioBar && nowPlaying && (

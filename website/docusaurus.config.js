@@ -134,13 +134,13 @@ const config = {
             position: 'left'
           },
           {
+            type: 'localeDropdown',
+            position: 'right'
+          },
+          {
             href: 'https://github.com/rain1024/musician',
             label: 'GitHub',
             position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'left'
           }
         ],
       },
