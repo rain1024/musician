@@ -31,6 +31,8 @@ const songs = [
     { "id": 35, "title": "Fortnight", "artist": "Taylor Swift", "genre": "Alternative", "cover": "fortnight.jpg", "audio": "fortnight.mp3" },
     { "id": 36, "title": "Style", "artist": "Taylor Swift", "genre": "Pop", "cover": "style.jpg", "audio": "style.mp3" },
     { "id": 37, "title": "ME!", "artist": "Taylor Swift, Brendon Urie", "genre": "Pop", "cover": "me.jpg", "audio": "me.mp3" },
+    { "id": 38, "title": "APT.", "artist": "ROSÉ, Bruno Mars", "genre": "Pop", "cover": "apt.jpg", "audio": "apt.mp3" },
+    { "id": 39, "title": "Older", "artist": "Sasha Alex Sloan", "genre": "Pop", "cover": "older.jpg", "audio": "older.mp3" }
 ];
 
 export default songs;

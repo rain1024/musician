@@ -259,6 +259,7 @@ export default function MusicList() {
                     >
                         <option value="">All Genres</option>
                         <option value="Classical">Classical</option>
+                        <option value="Pop">Pop</option>
                         <option value="New Age">New Age</option>
                         <option value="Soundtrack">Soundtrack</option>
                         <option value="K-Pop">K-Pop</option>
