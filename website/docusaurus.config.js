@@ -134,6 +134,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/labs/',
+            label: 'Labs',
+            position: 'left'
+          },
+          {
             type: 'localeDropdown',
             position: 'right'
           },
