@@ -21,9 +21,6 @@ function HomepageHeader() {
         </Translate>
         </Heading>
         <p className="hero__subtitle">
-        <Translate id="siteConfig.tagline" description="the tagLine">
-          {siteConfig.tagline}
-        </Translate>
         </p>
       </div>
     </header>
@@ -39,7 +36,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        {/* <Wheel/> */}
       </main>
     </Layout>
   );
