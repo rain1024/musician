@@ -5,9 +5,9 @@ import { PlayIcon, PauseIcon, InformationCircleIcon } from '@heroicons/react/24/
 // Lab data
 const labs = [
     { id: 1, term: "C Major Scale", description: "A major scale with the notes C, D, E, F, G, A, and B.", cover: "c-major.jpg", audio: "c-major.mp3" },
-    { id: 2, term: "Chord Progression", description: "A sequence of chords played in a specific order to establish a harmonic foundation.", cover: "chord-progression.jpg", audio: "../audios/chord_progression.mp3" },
-    { id: 3, term: "Scale", description: "A series of notes arranged by ascending or descending pitch, often forming the basis for melodies and harmonies.", cover: "../images/scale.jpg", audio: "../audios/scale.mp3" },
-    { id: 4, term: "Arpeggio", description: "Notes of a chord played sequentially rather than simultaneously.", cover: "../images/arpeggio.jpg", audio: "../audios/arpeggio.mp3" },
+    { id: 2, term: "Chord Progression", description: "A sequence of chords played in a specific order to establish a harmonic foundation.", cover: "chord-progression.jpg", audio: "chord-progression.mp3" },
+    { id: 3, term: "Scale", description: "A series of notes arranged by ascending or descending pitch, often forming the basis for melodies and harmonies.", cover: "scale.jpg", audio: "scale.mp3" },
+    { id: 4, term: "Arpeggio", description: "Notes of a chord played sequentially rather than simultaneously.", cover: "arpeggio.jpg", audio: "arpeggio.mp3" },
     { id: 5, term: "Interval", description: "The distance between two musical notes.", cover: "../images/interval.jpg", audio: "../audios/interval.mp3" },
 ];
 
