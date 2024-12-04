@@ -9,6 +9,7 @@ const labs = [
     { id: 3, term: "Scale", description: "A series of notes arranged by ascending or descending pitch, often forming the basis for melodies and harmonies.", cover: "scale.jpg", audio: "scale.mp3" },
     { id: 4, term: "Arpeggio", description: "Notes of a chord played sequentially rather than simultaneously.", cover: "arpeggio.jpg", audio: "arpeggio.mp3" },
     { id: 5, term: "Interval", description: "The distance between two musical notes.", cover: "../images/interval.jpg", audio: "../audios/interval.mp3" },
+    { id: 6, term: "C Major Chord", description: "A chord consisting of the notes C, E, and G, forming the tonic triad of the C Major scale.", cover: "c-major-chord.jpg", audio: "c-major-chord.mp3" }
 ];
 
 // LabCard component
