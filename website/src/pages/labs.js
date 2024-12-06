@@ -39,7 +39,7 @@ function LabCard({ lab, onPlay, onPause, nowPlaying }) {
                     <img
                         src={`../images/${lab.cover}`}
                         alt={lab.term}
-                        className="w-full h-40 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-60 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
                     />
                     <div
                         className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
