@@ -11,3 +11,4 @@
 
 * [The 5 Basic Motions of Piano Technique](https://www.youtube.com/watch?v=rto4hOS105A&t=667s&ab_channel=MarianLee), Marian Lee 
 * [Ranking Piano Pieces from Easiest to Hardest (Ft. Sophie Oui Oui)](https://www.youtube.com/watch?v=vJLIsgByHQE&ab_channel=TwoSetViolin), TwoSetViolin
+* [tiktok@patternsinpiano](https://www.tiktok.com/@patternsinpiano)
